@@ -106,17 +106,17 @@ const signUpFlowMachine = setup({
     choosingAccountType: {
       on: {
         SAVE_ACCOUNT_TYPE: {
-          actions:  assign({
-            accountType: ({event}) => event.params.accountType,
+          actions: assign({
+            accountType: ({ event }) => event.params.accountType,
           }),
-          
         },
         ON_NEXT: {
           target: "fillingBusinessName",
         },
         ON_BACK: {
           target: "fillingForm",
-      }},
+        },
+      },
     },
 
     fillingBusinessName: {
@@ -141,8 +141,7 @@ const signUpFlowMachine = setup({
 });
 
 export const {
-  Provider:SignMachineProvider,
+  Provider: SignMachineProvider,
   useActorRef,
-  useSelector
-
-} = createActorContext(signUpFlowMachine)
+  useSelector,
+} = createActorContext(signUpFlowMachine);
