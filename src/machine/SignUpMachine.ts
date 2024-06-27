@@ -140,4 +140,9 @@ const signUpFlowMachine = setup({
   },
 });
 
-export default createActorContext(signUpFlowMachine);
+export const {
+  Provider:SignMachineProvider,
+  useActorRef,
+  useSelector
+
+} = createActorContext(signUpFlowMachine)

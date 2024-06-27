@@ -1,8 +1,9 @@
 import React from 'react'
-import SignUpContext from '../machine/SignUpMachine'
+import { useActorRef } from '../machine/SignUpMachine'
+
 
 const AccountType = () => {
-    const { send } = SignUpContext.useActorRef()
+    const { send } = useActorRef()
   return (
     <div>
       <h2>Account Type</h2>

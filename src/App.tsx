@@ -1,11 +1,12 @@
 import "./App.css";
 import SignupForm from "./component/SignupForm";
-import SignUpMachineContext from "./machine/SignUpMachine";
+
 import AccountType from "./component/AccountType";
 import BusinnessName from "./component/BusinnessName";
+import { useSelector } from "./machine/SignUpMachine";
 
 function App() {
-  const state = SignUpMachineContext.useSelector((state) => state);
+  const state = useSelector((state) => state);
   console.log(state.context);
 
   return (

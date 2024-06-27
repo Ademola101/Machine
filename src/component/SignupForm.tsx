@@ -1,9 +1,10 @@
 import React from "react";
-import SignUpContext from "../machine/SignUpMachine";
+import { useActorRef, useSelector } from "../machine/SignUpMachine";
+
 
 const SignupForm = () => {
-  const { send } = SignUpContext.useActorRef();
-  const state = SignUpContext.useSelector((state) => state);
+  const { send } = useActorRef();
+  const state = useSelector((state) => state);
 
   return (
     <div>
